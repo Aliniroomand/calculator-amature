@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+body{
+    background-color: azure;
+}
+
+.calc{
+    width: 400px;
+    margin: 100px auto;
+    background-color: #fff;
+}
+.display {
+    color: #ffffff;
+    background: #279d00e2;
+    width: 400px;
+    overflow-y: hidden;
+    font-weight: 700;
+    text-shadow:  0 0 8px rgba(0, 0, 0, 0.758);
+    box-shadow: inset 0 0 1px 6px rgba(0, 0, 0, 0.321),2px 0 5px 10px rgba(0, 0, 0, 0.597) ;
+    border-radius: 30px;
+    text-align: right;
+    font-size: 60px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 30px solid black;
+ }
+ 
+ .keypad{
+    background: #afafaf;
+    width: 410px;
+    box-shadow:9px 9px 2px  #9d9d9d, -9px 9px 2px #9d9d9d,9px -7px 2px #9d9d9d,-1px -1px 2px #9d9d9d,
+    9px 9px 2px #9d9d9d, -3px 3px 3px #ff0000,3px -3px 0px #ffffff,-3px -3px 0px #ffffff;
+    border-radius: 30px;
+    color: aliceblue;
+    font-weight: 600;
+    margin-top: -5px;
+ }
+ .key{
+    font-size: 4rem;
+    padding: 0 25px;
+    margin:5px ;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.72) 0%, rgb(126, 126, 126) 100%);
+    border-radius: 20px;
+    width: 80px;
+    box-shadow: 0 5px 7px black ;
+
+
+    width: 90px;
+    height: 90px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 90px;
+    border-radius: 90px;
+    cursor: pointer;
+    user-select: none;
+ }
+ .first-row .key:first-child{
+    font-size: 50px;
+    padding-left: 10px;
+ }
+ .key:active{
+    background-color: rgba(13, 255, 0, 0.249) ;
+    color: rgba(255, 255, 255, 0.643);
+    box-shadow:inset 0 5px 9px 10px rgba(0, 0, 0, 0.746) ,inset -5px -5px 9px rgba(0, 0, 0, 0.741) ;
+    
+
+ }
