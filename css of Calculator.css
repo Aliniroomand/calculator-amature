@@ -3,52 +3,59 @@
     margin: 0;
     box-sizing: border-box;
     font-family: Arial;
-}
-body{
-    background-color: azure;
+    --abiRoshan:#397eff;
+  --abiTire:#002046;
+
 }
 
 .calc{
-    width: 400px;
-    margin: 100px auto;
-    background-color: #fff;
+   width: 400px;
+    margin-inline: auto
+    ;
 }
 .display {
     color: #ffffff;
-    background: #279d00e2;
-    width: 400px;
+    backdrop-filter: blur(3px);
+    width: 450px;
     overflow-y: hidden;
     font-weight: 700;
     text-shadow:  0 0 8px rgba(0, 0, 0, 0.758);
-    box-shadow: inset 0 0 1px 6px rgba(0, 0, 0, 0.321),2px 0 5px 10px rgba(0, 0, 0, 0.597) ;
+    box-shadow: inset 0 0 5px var(--abiTire),inset 0 0 30px var(--abiRoshan), inset 0 0 50px 5px var(--abiTire) ;
     border-radius: 30px;
     text-align: right;
     font-size: 60px;
-    padding: 10px;
+padding: 12px;
     margin-bottom: 10px;
-    border: 30px solid black;
+    position: fixed;
+    top: 30px;
+    z-index: 10;
  }
  
  .keypad{
-    background: #afafaf;
-    width: 410px;
-    box-shadow:9px 9px 2px  #9d9d9d, -9px 9px 2px #9d9d9d,9px -7px 2px #9d9d9d,-1px -1px 2px #9d9d9d,
-    9px 9px 2px #9d9d9d, -3px 3px 3px #ff0000,3px -3px 0px #ffffff,-3px -3px 0px #ffffff;
+    /* background: #646464ad; */
+    width: 450px;
+    position: fixed;
+    top: 130px;
+    height: 600px;
+    box-shadow: inset 0 0 5px var(--abiTire),inset 0 0 30px var(--abiRoshan), inset 0 0 50px 5px var(--abiTire),
+     0 0 5px var(--abiTire), 0 0 30px var(--abiRoshan),  0 0 50px 5px var(--abiTire) ;
+   padding-inline: 20px;
+   padding-top: 10px;
     border-radius: 30px;
-    color: aliceblue;
+    color:var(--abiTire);
     font-weight: 600;
     margin-top: -5px;
+    backdrop-filter: blur(3px);
+    z-index: 10;
  }
  .key{
     font-size: 4rem;
     padding: 0 25px;
     margin:5px ;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.72) 0%, rgb(126, 126, 126) 100%);
     border-radius: 20px;
     width: 80px;
-    box-shadow: 0 5px 7px black ;
-
-
+    box-shadow: inset 0 0 5px var(--abiRoshan),inset 0 0 20px var(--abiRoshan),inset 0 0 30px var(--abiRoshan),inset 0 0 30px var(--abiTire);
+   top: 10rem;
     width: 90px;
     height: 90px;
     border: 1px solid black;
@@ -63,9 +70,28 @@ body{
     padding-left: 10px;
  }
  .key:active{
-    background-color: rgba(13, 255, 0, 0.249) ;
-    color: rgba(255, 255, 255, 0.643);
-    box-shadow:inset 0 5px 9px 10px rgba(0, 0, 0, 0.746) ,inset -5px -5px 9px rgba(0, 0, 0, 0.741) ;
-    
-
+   box-shadow: inset 0 0 5px var(--abiTire),inset 0 0 20px var(--abiTire),inset 0 0 30px var(--abiTire),inset 0 0 30px var(--abiTire);;
+    color: var(--abiTire);
+    transition: 0.2s;
  }
+
+
+
+ /* BG animation */
+ /* ---- reset ---- */ 
+ /* ---- reset ---- */ body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container ---- */ #particles-js{ position:absolute; width: 100%; height: 100%; background-color: #93b6fa; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } /* ---- stats.js ---- */ .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } #stats, .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; }
+   @media (width <= 800px ){
+      .keypad,.display{
+         width: 100vw;
+         height: 60vh;
+      }
+ .key, .first-row .key:first-child{
+   font-size: 2rem;
+   padding: 0px;
+   margin:0px ;
+   width: 70px;
+   height: 70px;
+   line-height: 90px;
+
+      }
+}
